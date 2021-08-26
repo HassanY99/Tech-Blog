@@ -1,0 +1,38 @@
+<br />
+<a href="/dashboard/post" class="btn btn-outline-primary post">POST</a>
+<br />
+<br />
+<div class="card" style="width: 75%">
+  <div class="card-body">
+    <h5 class="card-title">The Way Home</h5>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Posted by: John Rockets on Aug 28 2021
+    </h6>
+    <p class="card-text">
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </p>
+    <a href="/dashboard/updatePost" class="card-link update">Update</a>
+    <a href="#" id="delete" class="card-link delete delete-post-btn">Delete</a>
+  </div>
+  {{#each posts as |post|}}
+    <div class="card-body">
+      <h5 class="card-title">{{title}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">
+        Posted by:
+        {{username}}
+        on
+        {{{format_date created_at}}}
+      </h6>
+      <p class="card-text">
+        {{post}}
+      </p>
+      <a href="/dashboard/updatePost" class="card-link update">Update</a>
+      <a
+        href="/"
+        id="delete"
+        class="card-link delete delete-post-btn"
+      >Delete</a>
+    </div>
+  {{/each}}
+</div>
