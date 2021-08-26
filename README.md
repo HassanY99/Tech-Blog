@@ -80,7 +80,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
   ## Tests
 
-  - [Full Video](-)
+  - [Full Video](https://drive.google.com/file/d/1txaur2wz732O_SXOGXHSLQt254TAzbXm/view)
   
 
   ## Usage
