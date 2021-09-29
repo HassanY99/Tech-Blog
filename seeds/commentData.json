@@ -1,0 +1,32 @@
+[
+  {
+    "body": "Im not sure either 1",
+    "user_id": 1,
+    "post_id": 1
+  },
+  {
+    "body": "Im not sure either 1",
+    "user_id": 1,
+    "post_id": 3
+  },
+  {
+    "body": "Im not sure either 2",
+    "user_id": 2,
+    "post_id": 1
+  },
+  {
+    "body": "Im not sure either 1",
+    "user_id": 2,
+    "post_id": 2
+  },
+  {
+    "body": "Im not sure either 2",
+    "user_id": 3,
+    "post_id": 2
+  },
+  {
+    "body": "Im not sure either 2",
+    "user_id": 3,
+    "post_id": 3
+  }
+]

@@ -1,50 +1,40 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/css/style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <nav>
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <a
-          class="nav-link"
-          id="nav-home-tab"
-          data-toggle="tab"
-          href="/"
-          role="tab"
-          aria-controls="nav-home"
-        >Home</a>
-        <a
-          class="nav-link"
-          id="nav-profile-tab"
-          data-toggle="tab"
-          href="/dashboard"
-          role="tab"
-          aria-controls="nav-profile"
-        >Dashboard</a>
-        <a
-          class="nav-link"
-          id="nav-contact-tab"
-          data-toggle="tab"
-          href="/login"
-          role="tab"
-          aria-controls="nav-contact"
-        >Login</a>
-      </div>
-    </nav>
-    <br />
-    {{{body}}}
-    <script src="/js/logging.js"></script>
-    <script src="/js/dashboard.js"></script>
-    <script src="/js/home.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+<header style="background-color:darkslategray;">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="btn btn-outline-secondary btn-lg m-3" aria-current="page" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="btn btn-outline-secondary btn-lg m-3" href="/dashboard">Dashboard</a>
+    </li>
+    {{#if logged_in}}
+    <li class="nav-item">
+      <button class="btn btn-danger btn-lg m-3" id="logout">Logout</button>
+    </li>
+    {{else}}
+    <li class="nav-item">
+      <a class="btn btn-outline-secondary btn-lg m-3" href="/login">Login</a>
+    </li>
+    {{/if}}
+  </ul>
+  <h1 style="color:white" class="p-4">{{header}}</h1>
+</header>
+<main>
+  <div class="container p-3">
+    {{{ body }}}
+  </div>
+</main>
+<script type="text/javascript" src="./js/logout.js"></script>
+</body>
 </html>

@@ -1,10 +1,13 @@
 {
-  "name": "tech-blog",
+  "name": "Tech-Blog",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/seed.js",
+    "watch": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -16,8 +19,10 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.3.3",
     "express-session": "^1.17.2",
-    "handlebars": "^4.7.7",
     "mysql2": "^2.3.0",
     "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }

@@ -1,0 +1,17 @@
+[
+  {
+    "title": "What is Express?",
+    "body": "Im having some trouble understanding what express is. can someone help me?",
+    "user_id": 3
+  },
+  {
+    "title": "What is A Controller?",
+    "body": "Im having some trouble understanding what a Controller is. can someone help me?",
+    "user_id": 1
+  },
+  {
+    "title": "What is a Modle?",
+    "body": "Im having some trouble understanding what Model is. can someone help me?",
+    "user_id": 2
+  }
+]

@@ -1,25 +1,38 @@
-<br />
-<form class="new-post-form">
-  <div class="form-group">
-    <label for="post-title">Title:</label>
-    <input
-      type="text"
-      class="form-control"
-      name="post-title"
-      id="post-title"
-      placeholder="The Way Home"
-    />
+<h3>Post:</h3>
+<div class="card">
+  <div class="card-header">
+    {{post.title}}
   </div>
-  <div class="form-group">
-    <label for="post-content">Post:</label>
-    <input
-      type="text"
-      class="form-control"
-      name="post-content"
-      id="post-content"
-      placeholder="Time to go 127.0.0.1"
-    />
-    <br />
-    <button type="submit" class="btn btn-primary">Submit</button>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{{post.body}}</p>
+      <footer class="blockquote-footer">{{post.user.username}} posted on" <cite title="Source Title">{{format_date post.createdAt}}</cite></footer>
+    </blockquote>
   </div>
-</form>
+</div>
+<div class="mt-5">
+  <h3>Comments:</h3>
+  {{#each post.comments as |comment|}}
+  <div class="card">
+    <div class="card-header">
+      <span class="blockquote-footer">{{comment.user.username}} posted on" <cite title="Source Title">{{format_date comment.createdAt}}</cite></span>
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>{{comment.body}}</p>
+      </blockquote>
+    </div>
+  </div>
+  {{/each}}
+</div>
+<div class="mt-5">
+  <h3>Add Comment:</h3>
+  <div class="card">
+    <form data-post="{{post.id}}" class="comment-form m-3">
+      <label class="m-2" for="comment">Add Comment:</label>
+      <input class="form-control m-2" id="comment">
+      <button type="submit" class="btn btn-primary m-2">Add Comment</button>
+    </form>
+  </div>
+</div>
+<script type="text/javascript" src="../public/js/post.js"></script>

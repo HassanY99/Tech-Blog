@@ -1,0 +1,41 @@
+<h2 class="m-3">Feed:</h2>
+{{#each posts as |post| }}
+<div id="post" data-post="{{post.id}}" class="card m-3">
+  <div class="card-header">
+    {{post.title}}
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{{post.body}}</p>
+      <footer class="blockquote-footer">{{post.user.username}} posted on: <cite title="Source Title">{{format_date post.createdAt}}</cite></footer>
+    </blockquote>
+  </div>
+  <button class="btn btn-primary m-2 minimize">View Comments</button>
+  <div class="container mb-3" style="display:none;">
+    <h3 class="m-2">Comments:</h3>
+    {{#each post.comments as |comment|}}
+    <div class="card">
+      <div class="card-header">
+        <span class="blockquote-footer">{{comment.user.username}} posted on" <cite title="Source Title">{{format_date comment.createdAt}}</cite></span>
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>{{comment.body}}</p>
+        </blockquote>
+      </div>
+    </div>
+    {{/each}}
+    <div class="mt-5">
+      <h3>Add Comment:</h3>
+      <div class="card">
+        <form data-post="{{post.id}}" class="comment-form m-3">
+          <label class="m-2" for="comment">Add Comment:</label>
+          <input class="form-control m-2" id="comment">
+          <button type="submit" class="btn btn-primary m-2">Add Comment</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+<script type="text/javascript" src="./js/homepage.js"></script>
