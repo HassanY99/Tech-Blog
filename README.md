@@ -6,7 +6,7 @@
   ## Description
 
   This application is a blog where users can login and create blog posts. Each blog post can recieve comments from other people.
-  Link of live app: [Live App]()
+  Link of live app: [Live App](https://tranquil-headland-87108.herokuapp.com/)
 
   ## Licensing
 
@@ -77,8 +77,8 @@ THEN I am able to view comments but I am prompted to log in again before I can a
   
   ## Tests
 
-  - [Full Video]()
-  
+  - [Full Video](https://watch.screencastify.com/v/VdbIHQ42LehDXNZuJ8F8)
+
   ## Contributing
 
   You can email me
